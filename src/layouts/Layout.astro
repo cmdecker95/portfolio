@@ -1,0 +1,41 @@
+---
+import Nav from "../components/Nav.svelte";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Christian Decker is a self-taught programmer with 5 years of experience and a passion for problem solving. Specializing in using modern frameworks such as SvelteKit, React, and Astro, his journey began with training from platforms like Udemy, Codecademy, and YouTube. He thrives on creating elegant solutions and is committed to continuously expanding his skillset."
+    />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-accent: rgb(245, 75, 45);
+    --color-bg: rgb(20, 15, 15);
+    --color-border: rgb(220, 200, 200);
+    --color-text: rgb(245, 235, 235);
+  }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--color-bg);
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: none;
+  }
+</style>

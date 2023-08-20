@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio - Christian Decker">
+  <main>
+    <!-- <img src="Space Background.png" alt="pixel art space background" /> -->
+    <h1><span>CHRISTIAN</span>CHRISTIAN</h1>
+    <h1><span>DECKER</span>DECKER</h1>
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    background: url("Space Background.png");
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: Roboto Mono, system-ui, sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
+    line-height: 0.9;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  h1 span {
+    color: var(--color-text);
+    opacity: 0.9;
+  }
+</style>

@@ -18,14 +18,18 @@ jobs:
         with:
           node-version: 16 # Specify Node.js version 16
 
+      - name: Setup pnpm
+        run: npm install -g pnpm
+
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       - name: Build Astro site
-        run: npm run build
+        run: pnpm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.9
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Change this to your Astro build output directory
+          # GitHub token
+          token: ${{ github.token }}
+          

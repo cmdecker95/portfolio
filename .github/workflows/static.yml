@@ -7,13 +7,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-env:
-  BUILD_PATH: "."
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,10 +16,10 @@ jobs:
         with:
           node-version: 16
       - uses: actions/configure-pages@v3
-      - run: npm run astro build
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v2
         with:
-          path: ${{ env.BUILD_PATH }}/dist
+          path: ./dist
 
   deploy:
     environment:

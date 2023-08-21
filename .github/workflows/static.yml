@@ -10,26 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 16 # Specify Node.js version 16
+          node-version: 18
 
-      - name: Setup pnpm
-        run: npm install -g pnpm
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Build Astro site
-        run: pnpm run build
-
-      - name: Deploy GitHub Pages site
-        uses: actions/deploy-pages@v1.2.9
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/deploy-pages@v1.2.9
         with:
-          # GitHub token
           token: ${{ github.token }}
           

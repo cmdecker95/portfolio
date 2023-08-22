@@ -4,10 +4,37 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portfolio - Christian Decker">
   <main>
-    <div class="scrolling-text">
-      <h1><span>CHRISTIAN</span>CHRISTIAN</h1>
-      <h1><span>DECKER</span>DECKER</h1>
-    </div>
+    <h1 class="scrolling-text">
+			<span>CHRISTIAN</span><br>
+			<span>DECKER</span>
+		</h1>
+		<section id="projects">
+			<h2>Projects</h2>
+			<ul>
+				<li>Project 01</li>
+				<li>Project 02</li>
+				<li>Project 03</li>
+				<li>Project 04</li>
+			</ul>
+		</section>
+		<section id="experience">
+			<h2>Experience</h2>
+			<ul>
+				<li>Job 01</li>
+				<li>Job 02</li>
+				<li>Job 03</li>
+				<li>Job 04</li>
+			</ul>
+		</section>
+		<section id="contact">
+			<h2>Contact</h2>
+			<form>
+				<input type="text" />
+				<input type="text" />
+				<input type="text" />
+				<input type="submit" />
+			</form>
+		</section>
   </main>
 </Layout>
 
@@ -26,18 +53,14 @@ import Layout from "../layouts/Layout.astro";
     font-family: Roboto Mono, system-ui, sans-serif;
     font-size: 10rem;
     font-weight: 700;
-    line-height: 0.9;
+    line-height: 0.8;
     margin: 0;
     padding: 0;
     white-space: nowrap;
-    animation: scrollLeft 20s linear infinite;
+    animation: scrollLeft 10s linear infinite;
   }
 
-  h1 span {
-    color: var(--color-text);
-    opacity: 0.9;
-  }
-
+  
   @keyframes scrollLeft {
     0% {
       transform: translateX(100%);

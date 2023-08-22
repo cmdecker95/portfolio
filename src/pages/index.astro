@@ -4,13 +4,20 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portfolio - Christian Decker">
   <main>
-    <!-- <img src="Space Background.png" alt="pixel art space background" /> -->
-    <h1><span>CHRISTIAN</span>CHRISTIAN</h1>
-    <h1><span>DECKER</span>DECKER</h1>
+    <div class="scrolling-text">
+      <h1><span>CHRISTIAN</span>CHRISTIAN</h1>
+      <h1><span>DECKER</span>DECKER</h1>
+    </div>
   </main>
 </Layout>
 
 <style>
+  .scrolling-text {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
   h1 {
     background: url("Space Background.png");
     background-clip: text;
@@ -23,10 +30,20 @@ import Layout from "../layouts/Layout.astro";
     margin: 0;
     padding: 0;
     white-space: nowrap;
+    animation: scrollLeft 20s linear infinite;
   }
 
   h1 span {
     color: var(--color-text);
     opacity: 0.9;
   }
-</style>
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+	</style>

@@ -38,11 +38,16 @@ import Layout from "../layouts/Layout.astro";
 <style>
 	main {
 		display: flex;
-		gap: 3rem;
+		gap: 5rem;
 		overflow-x: hidden;
 		padding: 0 2rem;
 	}
 
+	section {
+		margin: 0;
+		padding: 0;
+	}
+	
 	#top {
 		background: url("Space Background.png");
 	}
@@ -58,8 +63,11 @@ import Layout from "../layouts/Layout.astro";
     0% {
       transform: translateX(-25%);
     }
-    100% {
+    99% {
       transform: translateX(-50%);
     }
+		100% {
+      transform: translateX(-25%);
+			}
   }
 	</style>

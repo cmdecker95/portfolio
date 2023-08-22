@@ -4,10 +4,8 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portfolio - Christian Decker">
   <main>
-    <h1 class="scrolling-text">
-			<span>CHRISTIAN</span><br>
-			<span>DECKER</span>
-		</h1>
+    <section id="top">
+			<h1 class="scrolling-text">CHRISTIAN•DECKER•</h1>
 		<section id="projects">
 			<h2>Projects</h2>
 			<ul>
@@ -39,19 +37,23 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+main {
+	display: flex;
+	gap: 3rem;
+	padding: 0 2rem;
+}
   .scrolling-text {
     display: flex;
-    overflow: hidden;
-    width: 100%;
+    
   }
 
   h1 {
     background: url("Space Background.png");
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: 700;
-    line-height: 0.8;
-    white-space: nowrap;
-    animation: scrollLeft 10s linear infinite;
+    
+    
+    animation: scrollLeft 7s linear infinite;
   }
 
   

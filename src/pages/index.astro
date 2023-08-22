@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Portfolio - Christian Decker">
   <main>
     <section id="top">
-			<h1 class="scrolling-text">CHRISTIANDECKERCHRISTIANDECKER</h1>
+			<h1>CHRISTIANDECKERCHRISTIANDECKER</h1>
 		<section id="projects">
 			<h2>Projects</h2>
 			<ul>
@@ -43,10 +43,6 @@ main {
 	overflow-x: hidden;
 	padding: 0 2rem;
 }
-  .scrolling-text {
-    display: flex;
-    
-  }
 
 	#top {
 	background: url("Space Background.png");
@@ -56,7 +52,7 @@ main {
     
     font-size: 8rem;
     font-weight: 700;
-    
+    white-space: nowrap;
     
     animation: scrollLeft 7s linear infinite;
   }
@@ -64,10 +60,10 @@ main {
   
   @keyframes scrollLeft {
     0% {
-      transform: translateX(0%);
+      transform: translateX(-50%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
 	</style>

@@ -4,78 +4,126 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portfolio - Christian Decker">
   <main>
-    <section id="top">	<h1>DECKERCHRISTIANDECKERCHRISTIAN</h1>
-		<section id="projects">
-			<h2>Projects</h2>
-			<ul>
-				<li>Project 01</li>
-				<li>Project 02</li>
-				<li>Project 03</li>
-				<li>Project 04</li>
-			</ul>
-		</section>
-		<section id="experience">
-			<h2>Experience</h2>
-			<ul>
-				<li>Job 01</li>
-				<li>Job 02</li>
-				<li>Job 03</li>
-				<li>Job 04</li>
-			</ul>
-		</section>
-		<section id="contact">
-			<h2>Contact</h2>
-			<form>
-				<input type="text" />
-				<input type="text" />
-				<input type="text" />
-				<input type="submit" />
-			</form>
-		</section>
+    <section id="top">
+      <h1>CHRISTIAN<br />DECKER.</h1>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Project 01</li>
+        <li>Project 02</li>
+        <li>Project 03</li>
+        <li>Project 04</li>
+      </ul>
+    </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>Job 01</li>
+        <li>Job 02</li>
+        <li>Job 03</li>
+        <li>Job 04</li>
+      </ul>
+    </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <ul>
+        <li>Post 01</li>
+        <li>Post 02</li>
+        <li>Post 03</li>
+        <li>Post 04</li>
+      </ul>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" />
+        <input type="text" />
+        <input type="text" />
+        <input type="submit" />
+      </form>
+    </section>
   </main>
 </Layout>
 
 <style>
-	main {
-		display: flex;
-		gap: 5rem;
-		overflow-x: hidden;
-		padding: 0 2rem;
-	}
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
 
-	section {
-		margin: 0;
-		padding: 0;
-	}
-	
-	#top {
-		background: url("Space Background.png");
-		border-bottom: 1px solid var(--color-border);
-	}
-	
+  section {
+    padding: 0 1.5rem;
+  }
+
+  #top {
+    background: url("Space Background.png");
+    border-bottom: 1px solid var(--color-border);
+    padding: 2rem;
+  }
+
   h1 {
-    font-size: 8rem;
-    font-weight: 700;
-    white-space: nowrap;
-    animation: scrollLeft 10s linear infinite;
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 1;
+    animation: blink 250ms linear;
   }
-	
-	#contact form {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-  
-  @keyframes scrollLeft {
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 425px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  #contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @keyframes blink {
     0% {
-			opacity: 0;
-      transform: translateX(-25%);
+      opacity: 0;
     }
-		50% {
-			opacity: 1;
-		}
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    49% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    99% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
     100% {
-			opacity: 0;
-      transform: translateX(-50%);
+      opacity: 1;
     }
   }
-	</style>
+</style>

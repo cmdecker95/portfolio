@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Portfolio - Christian Decker">
   <main>
-    <section id="top">	<h1>CHRISTIANDECKERCHRISTIANDECKERCHRISTIANDECKERCHRISTIANDECKER</h1>
+    <section id="top">	<h1>DECKERCHRISTIANDECKERCHRISTIAN</h1>
 		<section id="projects">
 			<h2>Projects</h2>
 			<ul>
@@ -50,24 +50,32 @@ import Layout from "../layouts/Layout.astro";
 	
 	#top {
 		background: url("Space Background.png");
+		border-bottom: 1px solid var(--color-border);
 	}
 	
   h1 {
     font-size: 8rem;
     font-weight: 700;
     white-space: nowrap;
-    animation: scrollLeft 7s linear infinite;
+    animation: scrollLeft 10s linear infinite;
   }
+	
+	#contact form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
   
   @keyframes scrollLeft {
     0% {
+			opacity: 0;
       transform: translateX(-25%);
     }
-    99% {
+		50% {
+			opacity: 1;
+		}
+    100% {
+			opacity: 0;
       transform: translateX(-50%);
     }
-		100% {
-      transform: translateX(-25%);
-			}
   }
 	</style>

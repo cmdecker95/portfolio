@@ -1,0 +1,20 @@
+---
+const { title, text } = Astro.props;
+---
+
+<div class="card">
+  <h3>{title}</h3>
+  <p>{text}</p>
+</div>
+
+<style>
+  .card {
+    --padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    height: calc(100% - 2 * var(--padding));
+    line-height: 150%;
+    margin: 0;
+    padding: var(--padding);
+  }
+</style>

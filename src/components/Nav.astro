@@ -1,0 +1,131 @@
+<nav>
+  <div class="left">
+    <a href="#top">
+      <h1 id="dot">^,^</h1>
+    </a>
+  </div>
+  <div class="right">
+    <ul>
+      <a href="#projects">
+        <li>Projects</li>
+      </a>
+      <a href="#experience">
+        <li>Experience</li>
+      </a>
+      <a href="#blog">
+        <li>Blog</li>
+      </a>
+      <a href="#contact">
+        <li>Contact</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  :root {
+    --color-shadow: rgba(20, 15, 15, 0.2);
+  }
+
+  nav {
+    align-items: center;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 0 10px var(--color-shadow);
+    color: var(--color-text);
+    display: flex;
+    height: 4rem;
+    inset: 0;
+    bottom: auto;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    z-index: 99;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  #dot {
+    animation: blink 250ms linear, float 2s linear infinite;
+    background: var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-border);
+    color: var(--color-bg);
+    font-size: 1rem;
+    outline: 2px solid var(--color-border);
+    outline-offset: -2px;
+    padding: 0.25rem 0.75rem;
+    transition: 100ms ease;
+  }
+
+  #dot:hover {
+    background: var(--color-text);
+    box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-accent);
+    color: var(--color-accent);
+    font-weight: bold;
+    transform: translateY(-2px);
+    transition: 100ms ease;
+  }
+
+  ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    49% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    99% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(2px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

@@ -1,119 +1,41 @@
 ---
-import Card from "../components/Card.astro";
-import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+
+import Projects from "../components/sections/Projects.astro";
+import Experience from "../components/sections/Experience.astro";
+import Blog from "../components/sections/Blog.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout title="Portfolio - Christian Decker">
-  <Header />
-  <Nav />
   <main>
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <Card
-          title="Project 01"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Project 02"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Project 03"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Project 04"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-      </ul>
-    </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <Card
-          title="Experience 01"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Experience 02"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Experience 03"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Experience 04"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-      </ul>
-    </section>
-    <section id="blog">
-      <h2>Blog</h2>
-      <ul>
-        <Card
-          title="Post 01"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Post 02"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Post 03"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-
-        <Card
-          title="Post 04"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnipariatur illo, obcaecati molestias quod optio quidem minus vero ad blanditiis eum dolorem iusto nihil eveniet sed, voluptatibus similique? Accusantium earum recusandae voluptatibus, quia pariatur tempore eligendi? Nesciunt eius quasi, quod ducimus inventore at tempora vero repudiandae fuga, distinctio quo explicabo."
-        />
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <form>
-        <input type="text" />
-        <input type="text" />
-        <input type="text" />
-        <input type="submit" />
-      </form>
-    </section>
+    <div class="sections">
+      <Projects />
+      <Experience />
+      <Blog />
+      <Contact />
+    </div>
   </main>
 </Layout>
 
 <style>
   main {
+    background: radial-gradient(
+        ellipse at top left,
+        var(--gold),
+        transparent 50%
+      ),
+      radial-gradient(ellipse at bottom right, var(--slate), transparent 50%),
+      linear-gradient(to bottom, var(--purple), var(--color-bg));
+    background-attachment: fixed;
+  }
+
+  .sections {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 2rem 0;
-  }
-
-  section {
-    padding: 0 2rem;
-  }
-
-  ul {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    height: fit-content;
-  }
-
-  #contact form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: var(--section-gap);
   }
 </style>

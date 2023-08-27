@@ -1,0 +1,74 @@
+<h1 id="dot">^,^</h1>
+
+<style>
+  #dot {
+    animation: blink 250ms linear, float 2s linear infinite;
+    background: var(--color-bg-light);
+    border-radius: 8px;
+    box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-bg-light);
+    color: var(--color-bg);
+    font-size: 1rem;
+    outline: 2px solid var(--color-bg-light);
+    outline-offset: -2px;
+    padding: 0.25rem 0.75rem;
+    transition: 100ms ease;
+  }
+
+  #dot:hover {
+    box-shadow: 0 0 0 4px var(--color-bg), 0 0 0 6px var(--color-accent);
+    color: var(--color-accent);
+    font-weight: bold;
+    transform: translateY(-2px);
+    transition: 100ms ease;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    24% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    49% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
+    50% {
+      opacity: 0;
+    }
+    74% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    99% {
+      opacity: 0.5;
+      color: var(--color-accent);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(2px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-2px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+</style>

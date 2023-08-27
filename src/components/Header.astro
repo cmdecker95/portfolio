@@ -1,55 +1,29 @@
 <header id="top">
   <img src="./space.png" alt="pixelated image of space" />
-  <h1>CHRISTIAN<br />DECKER</h1>
 </header>
 
 <style>
   header {
     border-bottom: 1px solid var(--color-border);
-    display: grid;
     height: 300px;
     overflow: hidden;
     padding: 0;
-    place-items: center;
-    position: relative;
   }
 
   img {
     min-height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
-
-  h1 {
-    font-size: 7rem;
-    font-weight: 900;
-    letter-spacing: 0.9;
-    line-height: 0.9;
-    text-align: center;
+    min-width: 100%;
   }
 
   @media (max-width: 768px) {
     header {
       height: 200px;
     }
-    h1 {
-      font-size: 4rem;
-    }
-    h2 {
-      font-size: 2rem;
-    }
   }
 
   @media (max-width: 425px) {
     header {
       height: 150px;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    h2 {
-      font-size: 1.5rem;
     }
   }
 </style>

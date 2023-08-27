@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Header.astro";
 import Nav from "../components/Nav.astro";
 
 const { title } = Astro.props;
@@ -18,7 +19,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <!-- <Nav /> -->
+    <Header />
+    <Nav />
     <slot />
   </body>
 </html>
@@ -27,17 +29,29 @@ const { title } = Astro.props;
   @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
   :root {
+    --blackish: rgb(20, 15, 15);
+    --purple: rgb(32, 25, 32);
+    --gold: rgba(120, 100, 70, 0.1);
+    --slate: rgba(66, 70, 77, 0.2);
+    --goop: rgb(220, 200, 200);
+
     --color-accent: rgb(245, 75, 45);
-    --color-bg: rgb(20, 15, 15);
-    --color-border: rgb(220, 200, 200);
+    --color-bg: var(--blackish);
+    --color-bg-light: var(--goop);
+    --color-border: var(--goop);
+    --color-border-dark: var(--slate);
     --color-text: rgb(245, 235, 235);
+    --color-text-dark: var(--blackish);
+
     --font-family: Questrial, system-ui, sans-serif;
     --font-header: Space Mono, monospace;
+    --nav-height: 6rem;
+    --section-gap: 2rem;
   }
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 8rem;
+    scroll-padding-top: calc(var(--nav-height) + var(--section-gap));
   }
 
   body {

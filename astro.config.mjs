@@ -6,6 +6,5 @@ import netlify from "@astrojs/netlify/functions";
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte()],
-  output: "hybrid",
-  adapter: netlify()
+  adapter: netlify(),
 });

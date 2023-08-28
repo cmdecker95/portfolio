@@ -1,30 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import Projects from "../components/sections/Projects.astro";
-import Experience from "../components/sections/Experience.astro";
-import Blog from "../components/sections/Blog.astro";
-import Contact from "../components/sections/Contact.astro";
+import ProjectsSection from "../components/sections/ProjectsSection.astro";
+import ExperienceSection from "../components/sections/ExperienceSection.astro";
+import BlogSection from "../components/sections/BlogSection.astro";
+import ContactSection from "../components/sections/ContactSection.astro";
 ---
 
 <Layout title="Portfolio - Christian Decker">
-  <main>
-    <div class="sections">
-      <Projects />
-      <Experience />
-      <Blog />
-      <Contact />
-    </div>
-  </main>
+  <ProjectsSection slot="section" />
+  <ExperienceSection slot="section" />
+  <BlogSection slot="section" />
+  <ContactSection slot="section" />
 </Layout>
-
-<style>
-  .sections {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding-top: var(--section-gap);
-  }
-</style>

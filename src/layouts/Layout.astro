@@ -22,7 +22,9 @@ const { title } = Astro.props;
     <Header />
     <Nav />
     <main>
-      <slot />
+      <div class="sections">
+        <slot name="section" />
+      </div>
     </main>
   </body>
 </html>
@@ -74,6 +76,15 @@ const { title } = Astro.props;
     padding-bottom: 8rem;
   }
 
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-top: var(--section-gap);
+  }
+
   :is(h1, h2, h3, h4, h5) {
     font-family: var(--font-header);
     margin: 0;
@@ -83,5 +94,9 @@ const { title } = Astro.props;
   :is(ul, li) {
     list-style: none;
     padding-left: 0;
+  }
+
+  :is(p, textarea) {
+    line-height: 150%;
   }
 </style>

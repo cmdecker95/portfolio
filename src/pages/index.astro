@@ -5,6 +5,8 @@ import Projects from "../components/sections/Projects.astro";
 import Experience from "../components/sections/Experience.astro";
 import Blog from "../components/sections/Blog.astro";
 import Contact from "../components/sections/Contact.astro";
+
+export const prerender = true;
 ---
 
 <Layout title="Portfolio - Christian Decker">
@@ -19,17 +21,6 @@ import Contact from "../components/sections/Contact.astro";
 </Layout>
 
 <style>
-  main {
-    background: radial-gradient(
-        ellipse at top left,
-        var(--gold),
-        transparent 50%
-      ),
-      radial-gradient(ellipse at bottom right, var(--slate), transparent 50%),
-      linear-gradient(to bottom, var(--purple), var(--color-bg));
-    background-attachment: fixed;
-  }
-
   .sections {
     display: flex;
     flex-direction: column;

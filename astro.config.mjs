@@ -1,9 +1,11 @@
-import { defineConfig } from 'astro/config';
-
+import { defineConfig } from "astro/config";
 import svelte from "@astrojs/svelte";
+
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [svelte()],
-	site: 'https://cmdecker95.github.io'
+  output: "hybrid",
+  adapter: netlify()
 });

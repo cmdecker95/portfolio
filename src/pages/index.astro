@@ -1,7 +1,8 @@
 ---
 import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
-import snap from "@assets/astro-component-snap.png";
+import astroSnap from "@assets/astroSnap.png";
+import pythonSnap from "@assets/pythonSnap.png";
 ---
 
 <Layout title="Portfolio | Christian Decker">
@@ -25,11 +26,12 @@ import snap from "@assets/astro-component-snap.png";
 
     <!-- MAIN -->
     <main class="flex flex-col gap-36">
+      <!-- Full Stack Developer -->
       <section
         class="flex max-lg:flex-col justify-between items-center lg:items-start lg:gap-20"
       >
         <Picture
-          src={snap}
+          src={astroSnap}
           alt="Snappify snippet of an Astro component"
           height={400}
         />
@@ -38,42 +40,24 @@ import snap from "@assets/astro-component-snap.png";
             Full Stack Developer
           </h2>
           <p class="text-lg text-neutral-400 leading-loose tracking-wide">
-            I'm a full stack developer.
+            Front End Developer, UI/UX Designer, Product Designer, API Engineer
           </p>
         </div>
       </section>
 
+      <!-- Data Wizard -->
       <section
         class="flex flex-row-reverse max-lg:flex-col justify-between items-center lg:items-start lg:gap-20"
       >
         <Picture
-          src={snap}
-          alt="Snappify snippet of an Astro component"
+          src={pythonSnap}
+          alt="Snappify snippet of a Python script"
           height={400}
         />
         <div class="flex flex-col flex-1 py-8">
-          <h2 class="font-bold text-4xl text-neutral-100 mb-4">
-            Full Stack Developer
-          </h2>
+          <h2 class="font-bold text-4xl text-neutral-100 mb-4">Data Wizard</h2>
           <p class="text-lg text-neutral-400 leading-loose tracking-wide">
-            I'm a full stack developer.
-          </p>
-        </div>
-      </section>
-      <section
-        class="flex max-lg:flex-col justify-between items-center lg:items-start lg:gap-20"
-      >
-        <Picture
-          src={snap}
-          alt="Snappify snippet of an Astro component"
-          height={400}
-        />
-        <div class="flex flex-col flex-1 py-8">
-          <h2 class="font-bold text-4xl text-neutral-100 mb-4">
-            Full Stack Developer
-          </h2>
-          <p class="text-lg text-neutral-400 leading-loose tracking-wide">
-            I'm a full stack developer.
+            Machine Learning Engineer, Data Scientist, Data Engineer
           </p>
         </div>
       </section>

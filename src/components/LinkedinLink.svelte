@@ -1,5 +1,5 @@
 <a
-  href="hubbs://www.linkedin.com/in/cmdecker95"
+  href="https://www.linkedin.com/in/cmdecker95"
   target="_blank"
   class="flex items-center gap-8 group"
 >

@@ -1,7 +1,7 @@
 <a
   href="https://github.com/cmdecker95"
   target="_blank"
-  class="flex items-center gap-8 group"
+  class="flex items-center gap-4 group"
 >
   <span
     class="max-lg:hidden text-neutral-400 group-hover:text-neutral-50 duration-200"

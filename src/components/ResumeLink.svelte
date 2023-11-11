@@ -1,7 +1,7 @@
 <a
   href="https://docs.google.com/document/d/1veVRsE2DGBL09jQEV2R3_ZJgcxSOzmNjPRn0lj3JKBk/edit?usp=sharing"
   target="_blank"
-  class="flex items-center gap-8 group"
+  class="flex items-center gap-4 group"
 >
   <span
     class="max-lg:hidden text-neutral-400 group-hover:text-neutral-50 duration-200"

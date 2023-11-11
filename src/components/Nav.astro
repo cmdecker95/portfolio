@@ -1,15 +1,17 @@
 ---
-import GithubLink from "@components/GithubLink.svelte"
-import LinkedinLink from "@components/LinkedinLink.svelte"
-import ResumeLink from "@components/ResumeLink.svelte"
+import GithubLink from "@components/GithubLink.svelte";
+import LinkedinLink from "@components/LinkedinLink.svelte";
+import ResumeLink from "@components/ResumeLink.svelte";
 ---
+
 <nav
   class="fixed inset-0 lg:inset-0 bottom-auto lg:left-auto flex lg:flex-col justify-between lg:justify-center items-center lg:items-end max-lg:bg-neutral-950/50 max-lg:backdrop-blur p-4 lg:p-10 max-lg:border-b max-lg:border-white/10"
 >
-<span class="lg:hidden font-mono text-2xl text-white tracking-widest">CMD_</span>
-    <ul class="flex lg:flex-col justify-center items-center lg:items-end gap-2 lg:gap-6">
-      <GithubLink />
-      <LinkedinLink />
-      <ResumeLink />
-    </ul>
+  <ul
+    class="flex lg:flex-col justify-center items-center lg:items-end gap-2 lg:gap-6"
+  >
+    <GithubLink />
+    <LinkedinLink />
+    <ResumeLink />
+  </ul>
 </nav>

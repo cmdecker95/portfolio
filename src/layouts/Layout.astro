@@ -1,6 +1,4 @@
 ---
-import Nav from "@components/Nav.astro";
-
 interface Props {
   title: string;
 }
@@ -8,7 +6,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-gray-800 scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,22 +15,8 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="bg-neutral-950"
-    style="background:
-      radial-gradient(farthest-corner at top left, rgb(95 125 129 / .1), rgb(10 10 10 / .1) 50%),
-      radial-gradient(farthest-corner at right 10%, rgb(206 196 212 / .1), rgb(10 10 10 / .1) 50%),
-      radial-gradient(farthest-corner at bottom, rgb(117 91 87 / .1), rgb(10 10 10 / .1) 50%),
-      rgb(10 10 10);
-    "
+    class="bg-fixed bg-gradient-to-br from-gray-800 to-gray-950 min-h-screen"
   >
-    <Nav />
     <slot />
-    <footer
-      class="fixed inset-0 top-auto grid place-items-center bg-orange-700 p-2"
-    >
-      <span class="font-bold text-orange-100 uppercase"
-        >Portfolio Under Construction</span
-      >
-    </footer>
   </body>
 </html>

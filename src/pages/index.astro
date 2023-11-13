@@ -7,36 +7,35 @@ import ResumeLink from "@components/ResumeLink.astro";
 ---
 
 <Layout title="Portfolio | Christian Decker">
-  <div class="flex w-screen">
+  <div class="lg:flex w-screen max-w-[2000px] xl:mx-auto">
     <header
-      class="sticky inset-0 right-auto flex flex-col justify-between max-w-[40%] h-screen pl-36 py-36"
+      class="lg:sticky lg:inset-0 lg:right-auto flex flex-col justify-between lg:max-w-[45%] lg:h-screen px-4 md:px-12 lg:pl-28 xl:pl-36 py-12 lg:py-28 xl:py-36"
     >
       <div class="text-gray-200">
-        <h1 class="font-bold text-5xl tracking-tight">Christian Decker</h1>
-        <h2 class="text-xl mt-2">Lead Engineer at Booz Allen Hamilton</h2>
+        <h1 class="font-bold text-4xl xl:text-5xl tracking-tight">
+          Christian Decker
+        </h1>
+        <h2 class="lg:text-lg xl:text-xl lg:mt-1 xl:mt-2">
+          Lead Engineer at Booz Allen Hamilton
+        </h2>
         <p
-          class="flex flex-col gap-2 font-light text-gray-400 tracking-wide leading-relaxed
-        mt-8"
+          class="flex flex-col gap-2 font-light text-md text-gray-400 tracking-wide leading-relaxed
+        mt-4 lg:mt-8"
         >
           Most people have real hobbies.<br />
            I just teach myself programming.
         </p>
-        <ul class="flex gap-4 mt-10">
+        <ul class="flex max-[360px]:flex-col gap-2 lg:gap-4 mt-7 lg:mt-10">
           <GitHubLink />
           <LinkedInLink />
           <ResumeLink />
         </ul>
       </div>
-      <footer
-        class="grid place-items-center rounded-full bg-orange-800 px-3 py-1 animate-pulse"
-      >
-        <span class="uppercase font-light text-sm text-white tracking-wider"
-          >Portfolio Under Construction</span
-        >
-      </footer>
     </header>
 
-    <main class="flex flex-col gap-24 max-w-[50%] ml-auto pr-36 py-36">
+    <main
+      class="flex flex-col gap-24 lg:max-w-[55%] ml-auto px-4 md:px-12 py-12 lg:py-28 xl:py-36"
+    >
       <section
         id="about"
         class="flex flex-col gap-8 font-light text-gray-400 tracking-wide leading-relaxed"

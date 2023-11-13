@@ -1,177 +1,130 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
-import GitHubLink from "@components/GithubLink.astro";
-import LinkedInLink from "@components/LinkedinLink.astro";
-import ResumeLink from "@components/ResumeLink.astro";
+import GitHubLink from "@components/links/GithubLink.astro";
+import LinkedInLink from "@components/links/LinkedinLink.astro";
+import ResumeLink from "@components/links/ResumeLink.astro";
+
+import Section from "@components/ui/Section.astro";
+import Article from "@components/ui/Article.astro";
 ---
 
-<Layout title="Portfolio | Christian Decker">
-  <div class="lg:flex w-screen max-w-[2000px] xl:mx-auto">
+<Layout title="Christian Decker">
+  <div class="flex max-xl:flex-col xl:justify-end w-screen max-xl:py-16">
+    <!-- Hero Section -->
     <header
-      class="lg:sticky lg:inset-0 lg:right-auto flex flex-col justify-between lg:max-w-[45%] lg:h-screen px-4 md:px-12 lg:pl-28 xl:pl-36 py-12 lg:py-28 xl:py-36"
+      class="xl:fixed inset-0 right-[50%] max-sm:p-8 max-md:p-24 p-32 xl:pr-0"
     >
-      <div class="text-gray-200">
-        <h1 class="font-bold text-4xl xl:text-5xl tracking-tight">
-          Christian Decker
-        </h1>
-        <h2 class="lg:text-lg xl:text-xl lg:mt-1 xl:mt-2">
-          Lead Engineer at Booz Allen Hamilton
-        </h2>
-        <p
-          class="flex flex-col gap-2 font-light text-md text-gray-400 tracking-wide leading-relaxed
-        mt-4 lg:mt-8"
-        >
-          Most people have real hobbies.<br />
-           I just teach myself programming.
-        </p>
-        <ul class="flex max-[360px]:flex-col gap-2 lg:gap-4 mt-7 lg:mt-10">
-          <GitHubLink />
-          <LinkedInLink />
-          <ResumeLink />
-        </ul>
-      </div>
+      <h1
+        class="font-bold max-[440px]:text-4xl text-5xl text-gray-200 tracking-tight"
+      >
+        Christian Decker
+      </h1>
+      <h2 class="max-[440px]:text-md text-xl text-gray-200 mt-2">
+        Lead Engineer at Booz Allen Hamilton
+      </h2>
+      <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-4">
+        Most people have hobbies.<br />I just code.
+      </p>
+      <ul class="flex gap-4 mt-8">
+        <GitHubLink />
+        <LinkedInLink />
+        <ResumeLink />
+      </ul>
     </header>
 
     <main
-      class="flex flex-col gap-24 lg:max-w-[55%] ml-auto px-4 md:px-12 py-12 lg:py-28 xl:py-36"
+      class="flex flex-col gap-16 xl:w-[50%] max-sm:p-8 max-md:p-24 p-32 xl:pl-0"
     >
-      <section
-        id="about"
-        class="flex flex-col gap-8 font-light text-gray-400 tracking-wide leading-relaxed"
-      >
-        <p>
+      <!-- About Section -->
+      <Section title="about">
+        <Article>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
           culpa? Aperiam asperiores dolor optio consectetur delectus dolores
           laudantium mollitia exercitationem iste nam. Commodi possimus pariatur
           animi quaerat architecto maxime placeat.
-        </p>
-        <p>
+        </Article>
+        <Article>
           Officiis reprehenderit enim repellat mollitia itaque quia voluptas,
           vitae optio, voluptatibus excepturi architecto culpa quisquam
           exercitationem obcaecati. Vero, harum unde natus, tempore dolor neque
           necessitatibus aspernatur eveniet a optio reiciendis?
-        </p>
-        <p>
+        </Article>
+        <Article>
           Natus, doloribus in. Aperiam praesentium sit vel omnis iusto ipsam
           sapiente voluptas est dolor sunt, illum quisquam eos, nam autem
           aliquid molestias placeat? Maxime, aliquam ratione odio atque ipsum
           eligendi?
-        </p>
-      </section>
+        </Article>
+      </Section>
 
       <!-- Projects Section -->
-      <section id="projects">
-        <h2 class="uppercase font-semibold text-gray-200">Projects</h2>
-        <h3 class="uppercase text-sm text-teal-400 mt-8">2023</h3>
-        <h4 class="font-semibold text-gray-200">MUV Collective</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+      <Section title="projects">
+        <Article heading="2023" subject="The MUV Collective">
           Developed MUV Collective using Astro, Vercel, and Xata. Integrated
           Appwrite for enhanced functionality.
-        </p>
-        <h3 class="uppercase text-sm text-teal-400 mt-8">2022</h3>
-        <h4 class="font-semibold text-gray-200">VERO Gear Shop</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+        </Article>
+        <Article heading="2022" subject="VERO Gear Shop">
           Created VERO Gear Shop using Svelte, SvelteKit, Railway, and
           CloudFlare. Additionally utilized Astro and Xata to optimize
           performance and functionality.
-        </p>
-      </section>
+        </Article>
+      </Section>
 
       <!-- Experience Section -->
-      <section id="experience">
-        <h2 class="uppercase font-semibold text-gray-200">Experience</h2>
-        <ul class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8 lg:mt-8">
-          <h3 class="uppercase text-sm text-teal-400 max-lg:mt-8">
-            NOV 2022 — PRESENT
-          </h3>
-          <div class="col-span-2">
-            <h4 class="font-semibold text-gray-200">
-              Lead Engineer · Booz Allen Hamilton
-            </h4>
-            <p
-              class="font-light text-gray-400 tracking-wide leading-relaxed mt-2"
-            >
-              Built a containerized reverse proxy between the Databricks Delta
-              Lake and the Google Apigee Edge. Led the team in building custom
-              visualizations for Qlik Sense using jQuery.
-            </p>
-          </div>
-          <h3 class="uppercase text-sm text-teal-400 max-lg:mt-8">
-            APR 2022 — NOV 2022
-          </h3>
-          <div class="col-span-2">
-            <h4 class="font-semibold text-gray-200">
-              Staff Engineer · Booz Allen Hamilton
-            </h4>
-            <p
-              class="font-light text-gray-400 tracking-wide leading-relaxed mt-2"
-            >
-              Championed the entire product lifecycle of a project, ensuring
-              seamless development from concept to deployment.
-            </p>
-          </div>
-          <h3 class="uppercase text-sm text-teal-400 max-lg:mt-8">
-            NOV 2021 — APR 2022
-          </h3>
-          <div class="col-span-2">
-            <h4 class="font-semibold text-gray-200">Freelancer · Upwork</h4>
-            <p
-              class="font-light text-gray-400 tracking-wide leading-relaxed mt-2"
-            >
-              Built a scheduling algorithm and provided tutoring to X students
-              for y hours in Python, fostering a deeper understanding of
-              programming concepts.
-            </p>
-          </div>
-        </ul>
-      </section>
+      <Section title="experience">
+        <Article
+          heading="nov 2022 — present"
+          subject="Lead Engineer · Booz Allen Hamilton"
+        >
+          Built a containerized reverse proxy between the Databricks Delta Lake
+          and the Google Apigee Edge. Led the team in building custom
+          visualizations for Qlik Sense using jQuery.
+        </Article>
+        <Article
+          heading="apr 2022 — nov 2022"
+          subject="Staff Engineer · Booz Allen Hamilton"
+        >
+          Championed the entire product lifecycle of a project, ensuring
+          seamless development from concept to deployment.
+        </Article>
+        <Article heading="nov 2021 — apr 2022" subject="Freelancer · Upwork">
+          Built a scheduling algorithm and provided tutoring to X students for y
+          hours in Python, fostering a deeper understanding of programming
+          concepts.
+        </Article>
+      </Section>
 
       <!-- Education Section -->
-      <section id="education">
-        <h2 class="uppercase font-semibold text-gray-200">Education</h2>
-
-        <h3 class="uppercase text-sm text-teal-400 mt-8">College</h3>
-        <h4 class="font-semibold text-gray-200">
-          Associate of Arts in General Studies
-        </h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+      <Section title="education">
+        <Article
+          heading="college"
+          subject="Associate of Arts in General Studies"
+        >
           Completed relevant courses for degrees in Computer Science and
           Software Engineering.
-        </p>
-
-        <h3 class="uppercase text-sm text-teal-400 mt-8">Badges</h3>
-        <h4 class="font-semibold text-gray-200">8 Badges</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+        </Article>
+        <Article heading="badges" subject="8 Badges">
           Earned badges for completing courses and projects, showcasing
           dedication to continuous learning and skill improvement.
-        </p>
-
-        <h3 class="uppercase text-sm text-teal-400 mt-8">Udemy</h3>
-        <h4 class="font-semibold text-gray-200">50 Courses</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+        </Article>
+        <Article heading="udemy" subject="50 Courses">
           Enrolled in various Udemy courses to expand knowledge and skills in
           web development, programming languages, and related technologies.
-        </p>
-
-        <h3 class="uppercase text-sm text-teal-400 mt-8">Codecademy</h3>
-        <h4 class="font-semibold text-gray-200">6 Courses</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+        </Article>
+        <Article heading="codecademy" subject="6 Courses">
           Participated in Codecademy courses to gain practical experience and
           proficiency in coding languages and frameworks.
-        </p>
-
-        <h3 class="uppercase text-sm text-teal-400 mt-8">YouTube</h3>
-        <h4 class="font-semibold text-gray-200">NaN Hours</h4>
-        <p class="font-light text-gray-400 tracking-wide leading-relaxed mt-2">
+        </Article>
+        <Article heading="youtube" subject="inf">
           Watched every programming tutorial known to man, spanning the spectrum
           from clickbait heroes such as Tech with Tim and Theo to true content
           moguls like Corey Schafer and Network Chuck.
-        </p>
-      </section>
+        </Article>
+      </Section>
 
       <p
-        class="font-light text-sm text-gray-700 tracking-wide leading-relaxed border-t border-gray-700 pt-8"
+        class="font-light text-sm text-gray-700 tracking-wide leading-relaxed border-t border-gray-700 pt-4"
       >
         My portfolio was handmade with Astro, styled with Tailwind, versioned on
         GitHub, and deployed on Vercel. The layout is a heartfelt imitation of

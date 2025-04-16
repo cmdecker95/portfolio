@@ -1,36 +1,39 @@
 import * as React from "react";
 
 export default function ThemeToggle() {
-  const [text, setText] = React.useState("Light");
+  const [isDark, setIsDark] = React.useState(false);
 
   React.useEffect(() => {
-    const isDark = document.documentElement.classList.contains("dark");
-    setText(isDark ? "Dark" : "Light");
-  }, []);
-
-  React.useEffect(() => {
-    // Set initial text based on localStorage or system preference
-    const isDark =
+    // Set initial state based on localStorage or system preference
+    const isDarkMode =
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
         window.matchMedia("(prefers-color-scheme: dark)").matches);
-    setText(isDark ? "Dark" : "Light");
+
+    setIsDark(isDarkMode);
+
+    // Ensure the class is applied to document
+    document.documentElement.classList.toggle("dark", isDarkMode);
   }, []);
 
-  // Update the button text when toggling
+  // Update the theme when toggling
   const toggleTheme = () => {
     const html = document.documentElement;
-    const isDark = html.classList.toggle("dark");
-    localStorage.theme = isDark ? "dark" : "light";
-    setText(isDark ? "Dark" : "Light");
+    const newIsDark = html.classList.toggle("dark");
+    localStorage.theme = newIsDark ? "dark" : "light";
+    setIsDark(newIsDark);
   };
-
   return (
     <button
-      className="cursor-pointer rounded-full bg-zinc-200 px-4 py-2 text-sm hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700"
+      className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700"
       onClick={toggleTheme}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {text}
+      {isDark ? (
+        <i className="fa-solid fa-moon" />
+      ) : (
+        <i className="fa-solid fa-sun-bright" />
+      )}
     </button>
   );
 }

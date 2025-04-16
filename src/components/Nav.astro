@@ -1,11 +1,18 @@
-<nav class="flex justify-between items-center p-4 bg-gray-800 text-white">
-  <ul class="flex space-x-4">
-    <li><a href="/" class="hover:text-gray-400">Home</a></li>
-    <li><a href="/about" class="hover:text-gray-400">About</a></li>
-    <li><a href="/services" class="hover:text-gray-400">Services</a></li>
-    <li><a href="/contact" class="hover:text-gray-400">Contact</a></li>
+---
+import ThemeToggle from "./ThemeToggle";
+---
+
+<nav
+  class="sticky top-4 left-1/2 -translate-x-1/2 flex items-center justify-between w-[min(calc(100vw-2rem),40rem)] bg-zinc-100 dark:bg-zinc-950 dark:text-zinc-100 rounded-full p-4 shadow-md z-10 dark:shadow-none dark:border-zinc-700 border-2 border-zinc-700"
+>
+  <a href="/"><span class="name font-medium">Christian Decker</span></a>
+  <ul class="flex space-x-4 text-sm">
+    <li><a href="#" class="hover:text-zinc-500">My Story</a></li>
+    <li><a href="#" class="hover:text-zinc-500">Projects</a></li>
+    <li><a href="/blog" class="hover:text-zinc-500">Blog</a></li>
+    <li><a href="#" class="hover:text-zinc-500">Contact</a></li>
   </ul>
-  <span class="logo">
-    <a href="/">My Website</a>
-  </span>
+  <ul>
+    <li><ThemeToggle client:only /></li>
+  </ul>
 </nav>

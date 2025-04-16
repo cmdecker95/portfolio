@@ -1,9 +1,12 @@
 import * as React from "react";
 
 export default function ThemeToggle() {
-  const [text, setText] = React.useState(
-    document.documentElement.classList.contains("dark") ? "Dark" : "Light",
-  );
+  const [text, setText] = React.useState("Light");
+
+  React.useEffect(() => {
+    const isDark = document.documentElement.classList.contains("dark");
+    setText(isDark ? "Dark" : "Light");
+  }, []);
 
   React.useEffect(() => {
     // Set initial text based on localStorage or system preference

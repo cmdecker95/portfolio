@@ -1,28 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import me from "@/assets/me.jpeg";
-import { Image } from "astro:assets";
+import Bento from "@/components/Bento.astro";
 ---
 
 <Layout>
   <main class="absolute inset-0 grid h-full place-items-center">
-    <div
-      id="outer-circle"
-      class="grid place-items-center relative isolate rounded-full h-3/4 aspect-square overflow-hidden"
-    >
-      <Image
-        src={me}
-        alt="Christian smiling out in nature"
-        class="absolute z-10 grayscale-100 object-cover h-full scale-150 -left-[25%] -top-[10%]"
-      />
-      <div class="absolute z-30 h-1/4 w-5/8 translate-x-5/16">
-        <h1
-          class="h-full bg-zinc-100 dark:bg-zinc-950 flex items-center text-3xl font-medium rounded-l-full pl-12"
-        >
-          <span class="name h-fit">Hi, I'm Christian</span>
-        </h1>
-      </div>
-    </div>
+    <Bento />
   </main>
 </Layout>
 

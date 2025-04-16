@@ -17,6 +17,8 @@ const titleText = title ? `${title} • Christian Decker` : "Christian Decker";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Christian Decker's personal website." />
+    <meta name="author" content="Christian Decker" />
     <script is:inline>
       const userPrefersDark =
         localStorage.theme === "dark" ||
@@ -25,10 +27,15 @@ const titleText = title ? `${title} • Christian Decker` : "Christian Decker";
 
       document.documentElement.classList.toggle("dark", userPrefersDark);
     </script>
+    <script
+      src="https://kit.fontawesome.com/bbfe73b4d1.js"
+      crossorigin="anonymous"></script>
     <title>{titleText}</title>
   </head>
 
-  <body class="h-full bg-zinc-100 dark:bg-zinc-950 dark:text-zinc-100">
+  <body
+    class="h-full bg-zinc-100 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-100"
+  >
     <Nav />
     <main class="max-w-xl mx-auto py-12 prose prose-zinc dark:prose-invert">
       <slot />

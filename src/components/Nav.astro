@@ -3,15 +3,15 @@ import ThemeToggle from "./ThemeToggle";
 ---
 
 <nav
-  class="sticky top-4 left-1/2 -translate-x-1/2 flex items-center justify-between w-[min(calc(100vw-2rem),40rem)] bg-zinc-100 dark:bg-zinc-950 dark:text-zinc-100 rounded-full p-4 shadow-md z-10 dark:shadow-none dark:border-zinc-700 border-2 border-zinc-700"
+  class="sticky flex items-center space-x-8 top-0 z-1000 py-8 mx-auto max-w-3/4 lg:hidden bg-zinc-100 dark:bg-zinc-950 backdrop-blur-sm"
 >
   <a href="/"><span class="name font-medium">Christian Decker</span></a>
-  <ul class="flex space-x-4 text-sm">
+  <ul class="flex space-x-4 text-sm max-md:hidden">
     <li><a href="#" class="hover:text-zinc-500">My Story</a></li>
     <li><a href="#" class="hover:text-zinc-500">Projects</a></li>
     <li><a href="#" class="hover:text-zinc-500">Contact</a></li>
   </ul>
-  <ul>
+  <ul class="ml-auto flex space-x-4 text-sm">
     <li><ThemeToggle client:only /></li>
   </ul>
 </nav>

@@ -37,8 +37,6 @@ const titleText = title ? `${title} • Christian Decker` : "Christian Decker";
     class="h-full bg-zinc-100 dark:bg-zinc-950 text-zinc-950 dark:text-zinc-100"
   >
     <Nav />
-    <main class="max-w-xl mx-auto py-12 prose prose-zinc dark:prose-invert">
-      <slot />
-    </main>
+    <slot />
   </body>
 </html>

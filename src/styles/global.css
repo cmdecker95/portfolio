@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap");
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 @custom-variant dark (&:where(.dark, .dark *));
 
 .name {

@@ -1,10 +1,15 @@
 ---
+import ThemeToggle from "@/components/ThemeToggle";
 import me from "@/assets/me.jpg";
 import { Image } from "astro:assets";
 ---
 
-<div id="grid" class="gap-x-4 rounded-lg overflow-clip h-1/2 aspect-[1.618]">
-  <div id="a" class="rounded-lg overflow-clip">
+<div
+  class="grid grid-cols-5 grid-rows-3 max-lg:flex max-lg:flex-col gap-x-4 rounded-lg max-lg:max-w-3/4 max-w-11/12 xl:max-w-6xl aspect-[1.618]"
+>
+  <div
+    class="row-start-1 row-end-4 col-start-1 col-end-3 rounded-lg overflow-clip"
+  >
     <Image
       src={me}
       alt="Christian smiling away from the camera"
@@ -12,32 +17,27 @@ import { Image } from "astro:assets";
       loading="lazy"
     />
   </div>
-  <div id="b" class="z-1 bg-zinc-100 dark:bg-zinc-950 rounded-lg">
+  <div
+    class="row-start-2 row-end-3 col-start-2 col-end-4 text-4xl z-1 bg-zinc-100 dark:bg-zinc-950 rounded-lg"
+  >
     <h1 class="mb-0 grid place-items-center h-full">
-      <span class="name text-center">Christian<br />Decker</span>
+      <span class="name">Christian<br />Decker</span>
     </h1>
   </div>
   <div
-    id="c"
-    class="flex flex-col bg-zinc-200 dark:bg-zinc-700 rounded-lg border-2 border-zinc-950 dark:border-white/10 p-4 justify-around"
+    class="row-start-3 row-end-4 col-start-3 col-end-6 flex flex-col bg-zinc-200 dark:bg-zinc-700 dark:bg-radial-[at_50%_0%] dark:from-zinc-700 dark:to-zinc-800 rounded-lg border-2 border-zinc-950 dark:border-white/10 px-6 py-4"
   >
-    <h2 class="mt-0 mb-0 text-sm font-bold tracking-tight">
-      Full Stack Developer at Booz Allen.
+    <h2 class="text-2xl xl:text-3xl my-2 font-bold tracking-tight">
+      Full Stack Developer at Booz Allen
     </h2>
-    <p class="mt-0 mb-0 leading-6 text-sm">
+    <p class="text-lg xl:text-xl leading-8">
       Life long learner with a <em>passion for the practical</em>. I lead teams
       in building and deploying "<strong>function first, fashion always</strong
       >" web apps for the government.
     </p>
   </div>
   <div
-    id="d"
-    class="bg-radial from-zinc-950 dark:from-zinc-100 to-60% to-transparent -translate-4"
-  >
-  </div>
-  <div
-    id="e"
-    class="bg-zinc-950 dark:bg-zinc-100 rounded-lg grid place-items-center"
+    class="row-start-1 row-end-2 col-start-3 col-end-5 bg-zinc-950 dark:bg-zinc-100 rounded-lg grid place-items-center"
   >
     <ul class="flex space-x-4 list-none p-0 m-0">
       <li
@@ -45,7 +45,7 @@ import { Image } from "astro:assets";
       >
         <a href="https://github.com/cmdecker95" target="_blank">
           <i
-            class="fa-brands fa-square-github text-zinc-200 text-6xl dark:text-zinc-800 group-hover:text-zinc-50 dark:group-hover:text-zinc-950"
+            class="fa-brands fa-square-github text-zinc-200 text-8xl dark:text-zinc-800 group-hover:text-zinc-50 dark:group-hover:text-zinc-950"
           ></i><span class="absolute inset-0"></span>
         </a>
       </li>
@@ -54,43 +54,29 @@ import { Image } from "astro:assets";
       >
         <a href="https://www.linkedin.com/in/cmdecker95/" target="_blank">
           <i
-            class="fa-brands fa-linkedin text-zinc-200 text-6xl dark:text-zinc-800 group-hover:text-zinc-50 dark:group-hover:text-zinc-950"
+            class="fa-brands fa-linkedin text-zinc-200 text-8xl dark:text-zinc-800 group-hover:text-zinc-50 dark:group-hover:text-zinc-950"
           ></i><span class="absolute inset-0"></span>
         </a>
       </li>
     </ul>
   </div>
+  <div
+    class="row-start-1 row-end-2 col-start-2 col-end-3 z-10 relative max-lg:hidden"
+  >
+    <div
+      class="absolute right-0 bottom-0 size-[0.5rem] bg-zinc-100 dark:bg-zinc-950 mask-radial-at-top-left mask-radial-from-transparent mask-radial-to-white mask-radial-from-71% mask-radial-to-0%"
+    >
+    </div>
+  </div>
+  <div
+    class="row-start-3 row-end-4 col-start-2 col-end-3 z-10 relative max-lg:hidden"
+  >
+    <div
+      class="absolute right-0 top-0 size-[0.5rem] bg-zinc-100 dark:bg-zinc-950 mask-radial-at-bottom-left mask-radial-from-transparent mask-radial-to-white mask-radial-from-71% mask-radial-to-0%"
+    >
+    </div>
+  </div>
+  <div class="row-start-1 row-end-2 col-start-5 col-end-6 z-100">
+    <ThemeToggle client:only />
+  </div>
 </div>
-
-<style>
-  #grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  #a {
-    grid-column: 1 / 3;
-    grid-row: 1 / 4;
-  }
-  #b {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-  }
-  #c {
-    grid-column: 3 / 6;
-    grid-row: 3 / 4;
-  }
-  #d {
-    grid-column: 4 / 6;
-    grid-row: 1 / 3;
-  }
-  #e {
-    grid-column: 3 / 5;
-    grid-row: 1 / 2;
-  }
-
-  img {
-    margin: 0;
-  }
-</style>
